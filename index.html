@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="favicon.ico">
+   <title>Example-7</title>
+</head>
+
+<body>
+   <style>
+      /*https://tehsen.waheeddev.com/wo-author/*/
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+      body {
+         background-color: #ececec;
+      }
+
+      :root {
+         --mycolor1: #F9F3EE;
+         --mycolor2: #8C4448;
+         --mycolor3: #2F1718;
+         --mycolor4: #575A5F;
+         --mycolor5: #E6D4D5;
+         --myfont1: 'Roboto', sans-serif;
+         --myfont2: "Josefin Sans", Sans-serif;
+      }
+
+      .main {
+         box-sizing: border-box;
+         max-width: 900px;
+         margin: 0 auto;
+         background-color: #fff;
+         font-family: 'Roboto', sans-serif;
+
+
+      }
+
+      a {
+         text-decoration: none;
+         cursor: pointer;
+      }
+
+      * h2,
+      h3,
+      h4 {
+         margin: 0 0 10px 0 !important;
+         font-family: "Josefin Sans", Sans-serif !important;
+      }
+
+      h2 {
+         font-size: 24px !important;
+         font-weight: 700 !important;
+      }
+
+      h3,
+      h4 {
+         font-size: 16px !important;
+         font-weight: normal !important;
+
+      }
+
+      p {
+         font-size: 14px;
+         line-height: 18px;
+         margin: 10px 0 !important;
+         color: var(--mycolor4);
+      }
+
+      ul {
+         padding: 0 !important;
+      }
+
+      ul li {
+         list-style-type: none !important;
+         padding-left: 20px !important;
+         font-size: 14px !important;
+         line-height: 22px !important;
+         padding: 0 !important;
+      }
+
+      ._container {
+         max-width: 900px;
+         margin: 0 auto;
+      }
+
+      /*---------introduction--------*/
+
+      .introduction {
+         background-color: var(--mycolor1);
+      }
+
+      .introduction__container {}
+
+      ._container {}
+
+      .introduction__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         margin: 10px;
+      }
+
+      .introduction__content {
+         flex: 1 1 40%;
+         padding: 50px 20px;
+         font-family: var(--myfont2);
+      }
+
+      .introduction__content p {
+         color: var(--mycolor3) !important;
+      }
+
+      .introduction__sub-title {
+         font-size: 18px;
+         font-weight: 600 !important;
+         margin: 0 0 20px 0 !important;
+      }
+
+      .introduction__title {
+         font-size: 44px;
+         line-height: 46px;
+         font-weight: 700 !important;
+         margin: 0 0 15px 0 !important;
+      }
+
+      .introduction__text {
+         font-family: var(--myfont1);
+         margin: 0 0 15px 0 !important;
+      }
+
+      .introduction__button {
+         margin-top: 10px;
+      }
+
+      .cc-button {
+         display: inline-block;
+         background-color: var(--mycolor2);
+         padding: 17px 30px;
+         color: #fff;
+         line-height: normal !important;
+         position: relative;
+         z-index: 0;
+      }
+
+      .cc-button::after {
+         position: absolute;
+         content: '';
+         height: 100%;
+         width: 0;
+         top: 0;
+         left: 0;
+         background-color: var(--mycolor3);
+         transition: .3s;
+         z-index: -2;
+      }
+
+      .cc-button:hover:after {
+         height: 100%;
+         width: 100%;
+         transition: .3s;
+      }
+
+      .introduction__image {
+         flex: 1 1 40%;
+      }
+
+      .introduction__image img {
+         width: 100%;
+      }
+
+      @media screen and (max-width: 500px) {
+         .introduction__content {
+            flex: 1 1 100%;
+         }
+
+         .introduction__image {
+            flex: 1 1 100%;
+            margin-bottom: 30px;
+         }
+      }
+
+      /*--------welcome--------*/
+      .welcome {
+         background-color: #fff;
+         padding: 30px;
+      }
+
+      .welcome__container {}
+
+      ._container {}
+
+      .welcome__title {
+         text-align: center;
+         max-width: 80%;
+         margin: 0 auto;
+      }
+
+      .welcome__title h2 {
+         font-size: 28px !important;
+      }
+
+      .welcome__title h3 {
+         text-transform: uppercase;
+         font-weight: 600 !important;
+      }
+
+      .welcome__body {
+         margin: 0 -10px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+
+      .item-welcome {
+         flex: 1 1 25%;
+         margin: 10px;
+         padding: 25px;
+         border: 1px solid var(--mycolor5);
+         border-radius: 5px;
+         text-align: center;
+      }
+
+      .item-welcome h3 {
+         color: var(--mycolor4) !important;
+         letter-spacing: 0px !important;
+         font-weight: 600 !important;
+         margin: 15px 0 !important;
+         font-size: 18px !important;
+      }
+
+      .item-welcome__icon {}
+
+      .item-welcome-link {
+         font-size: 14px;
+         color: var(--mycolor2);
+         text-decoration: none !important;
+         transition: 0.2s;
+      }
+
+      .item-welcome:hover .item-welcome-link {
+         color: #000 !important;
+         transition: 0.2s;
+      }
+
+      @media screen and (max-width: 500px) {
+         .welcome__title {
+            max-width: 100%;
+         }
+
+         .item-welcome {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*featured*/
+
+      .featured {
+         padding: 30px;
+         background-color: var(--mycolor1);
+      }
+
+      .featured__container {}
+
+      ._contanier {}
+
+      .featured__body {
+         margin: 0 -10px;
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         align-items: center;
+      }
+
+      .featured__content {
+         flex: 1 1 40%;
+         margin: 10px;
+      }
+
+      .featured__content p {
+         margin: 10px 0 !important;
+      }
+
+      .featured__title {}
+
+      .cc-title {}
+
+      .cc-title h2 {
+         font-size: 18px !important;
+         line-height: 18px !important;
+         color: var(--mycolor2);
+         font-weight: 600 !important;
+         margin: 10px 0 !important;
+         text-transform: uppercase;
+      }
+
+      .cc-title p {
+         font-size: 28px !important;
+         line-height: 28px !important;
+         color: var(--mycolor3);
+         font-weight: 600 !important;
+         margin: 10px 0 !important;
+      }
+
+      .featured__cost {
+         font-weight: 600 !important;
+         color: var(--mycolor2);
+      }
+
+      .featured__button {
+         margin: 5px 0;
+      }
+
+      .cc-button {}
+
+      .featured__image {
+         flex: 1 1 40%;
+         margin: 10px;
+      }
+
+      .featured__image img {
+         width: 100% !important;
+         box-sizing: border-box;
+         padding: 0 50px;
+      }
+
+      @media screen and (max-width: 500px) {
+         .featured__image {
+            flex: 1 1 100%;
+         }
+
+         .featured__content {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*--------review------*/
+
+      .review {
+         padding: 30px;
+         text-align: center;
+      }
+
+      .review__container {}
+
+      ._container {}
+
+      .review__title-body {
+         max-width: 60%;
+         margin: 0 auto;
+      }
+
+      .review__title {}
+
+      .cc-title {}
+
+      .review__body {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         margin: 0 -10px;
+
+      }
+
+      .review__item {
+         margin: 10px;
+         flex: 1 1 25%;
+      }
+
+      .review__image {
+         box-sizing: border-box;
+         padding: 0 30px;
+      }
+
+      .review__image img {
+         width: 100%;
+         display: flex;
+      }
+
+      .review__mark {
+         margin: 10px 0;
+         color: #ffb70f;
+         font-size: 20px;
+      }
+
+      .review__mark span {
+         color: var(--mycolor5);
+      }
+
+      .review__button {}
+
+      .cc-button {}
+
+      @media screen and (max-width: 500px) {
+         .review__item {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*----------fact--------*/
+
+      .fact {
+         padding: 30px;
+         background-color: var(--mycolor2);
+         text-align: center;
+      }
+
+      .fact__container {}
+
+      ._container {}
+
+      .fact__title {
+
+         margin-bottom: 10px;
+      }
+
+      .fact__title h2 {
+         color: #fff !important;
+
+      }
+
+      .cc-title {}
+
+      .fact__body {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+      }
+
+      .fact__item {
+         display: flex;
+         flex: 1 1 30%;
+         align-items: center;
+         justify-content: center;
+         margin: 10px;
+      }
+
+      .fact__item p {
+         color: #fff;
+      }
+
+      .fact__icon {
+         background-color: #fff;
+         border-radius: 50%;
+         width: 64px;
+         height: 64px;
+         margin-right: 15px;
+         padding: 12px;
+         box-sizing: border-box;
+      }
+
+      .fact__icon img {
+         width: 40px;
+         height: 40px;
+      }
+
+      .fact__content {}
+
+      .fact__number {
+         font-size: 26px;
+         font-weight: 600 !important;
+      }
+
+      @media screen and (max-width: 500px) {
+         .fact__item {
+            flex: 1 1 100%;
+
+         }
+      }
+
+      /*-------advantages------*/
+
+      .advantages {
+         padding: 30px;
+      }
+
+      .advantages__container {}
+
+      ._container {}
+
+      .advantages__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         margin: 0 -10px;
+      }
+
+      .advantages__image {
+         flex: 1 1 40%;
+         margin: 10px;
+      }
+
+      .advantages__image img {
+         width: 100%;
+         padding: 0 40px;
+         box-sizing: border-box;
+      }
+
+      .advantages__content {
+         flex: 1 1 40%;
+         margin: 10px;
+      }
+
+      .advantages__title {
+         margin: 15px 0 !important;
+      }
+
+      .cc-title {}
+
+      .advantages__list {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      .advantages__list li {
+         flex: 1 1 40%;
+         margin: 5px;
+         position: relative;
+         padding-left: 20px !important;
+         margin: 0 !important;
+      }
+
+      .advantages__list li::before {
+         position: absolute;
+         content: '';
+         background: transparent url(img-7/advantages-check.png);
+         width: 16px;
+         height: 16px;
+         background-size: 16px 16px;
+         top: 3px;
+         left: 0;
+
+      }
+
+      .advantages__content h3 {
+         font-weight: 600 !important;
+      }
+
+      @media screen and (max-width: 500px) {
+         .advantages__content {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*----------indicators-------*/
+
+      .indicators {
+         background-color: var(--mycolor1);
+         padding: 30px;
+         overflow-x: hidden !important;
+      }
+
+      .indicators__container {}
+
+      ._container {}
+
+      .indicators__body {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         align-items: center;
+         margin: 0 -10px;
+      }
+
+      .indicators__items {
+         margin: 10px 20px 10px 10px;
+         flex: 1 1 40%;
+      }
+
+      .indicators__item {
+         margin: 15px 0 20px;
+         padding-bottom: 1px;
+         position: relative;
+      }
+
+      .indicators__item_1::after,
+      .indicators__item_2::after,
+      .indicators__item_3::after {
+         position: absolute;
+         content: '';
+         bottom: 0;
+         left: 0;
+         width: 50%;
+         height: 3px;
+         background-color: var(--mycolor2);
+         transition: .7s;
+      }
+
+      .indicators:hover .indicators__item::after {
+         width: 98%;
+         transition-duration: .7s;
+      }
+
+      .indicators:hover .indicators__item_2::after {
+         transition-delay: .7s;
+         width: 99%;
+      }
+
+      .indicators:hover .indicators__item_3::after {
+         transition-delay: 1.4s;
+         width: 100%;
+      }
+
+      .indicators__item::before {
+         position: absolute;
+         content: '?%';
+         bottom: 27px;
+         left: calc(50% - 20px);
+         width: 100%;
+         height: 3px;
+         font-size: 18px;
+         font-weight: 500 !important;
+         transition: .7s;
+      }
+
+      @keyframes procent {
+         0% {
+            content: '50%';
+         }
+
+         20% {
+            content: '60%';
+         }
+
+         40% {
+            content: '70%';
+         }
+
+         60% {
+            content: '80%';
+         }
+
+         80% {
+            content: '90%';
+         }
+
+         100% {
+            content: '98%';
+         }
+      }
+
+      @keyframes procent2 {
+         0% {
+            content: '50%';
+         }
+
+         20% {
+            content: '60%';
+         }
+
+         40% {
+            content: '70%';
+         }
+
+         60% {
+            content: '80%';
+         }
+
+         80% {
+            content: '90%';
+         }
+
+         100% {
+            content: '99%';
+         }
+      }
+
+      @keyframes procent3 {
+         0% {
+            content: '50%';
+         }
+
+         20% {
+            content: '60%';
+         }
+
+         40% {
+            content: '70%';
+         }
+
+         60% {
+            content: '80%';
+         }
+
+         80% {
+            content: '90%';
+         }
+
+         100% {
+            content: '100%';
+         }
+      }
+
+
+      .indicators:hover .indicators__item::before {
+         left: calc(98% - 40px);
+         transition-duration: .7s;
+         animation: procent linear .7s alternate forwards;
+      }
+
+      .indicators:hover .indicators__item_2::before {
+         transition-delay: .7s;
+         left: calc(99% - 40px);
+         animation: procent2 linear .7s .7s alternate forwards;
+      }
+
+      .indicators:hover .indicators__item_3::before {
+         transition-delay: 1.4s;
+         left: calc(100% - 40px);
+         animation: procent3 linear .7s 1.4s alternate forwards;
+      }
+
+
+      .indicators__item p {
+         color: var(--mycolor3);
+         font-weight: 500 !important;
+         font-size: 18px !important;
+      }
+
+      .indicators__content {
+         margin: 10px;
+         flex: 1 1 40%;
+      }
+
+      .indicators__title {
+         font-size: 28px !important;
+         line-height: 28px !important;
+         color: var(--mycolor3);
+         font-weight: 700 !important;
+         margin: 10px 0 !important;
+      }
+
+      @media screen and (max-width: 500px) {
+         .indicators__items {
+            flex: 1 1 100%;
+         }
+      }
+
+
+      /*------testimonials-------*/
+
+      .testimonials {
+         padding: 30px;
+      }
+
+      .testimonials__container {}
+
+      ._container {}
+
+      .testimonials__title-body {}
+
+      .testimonials__title {}
+
+      .testimonials__title h2 {
+         text-transform: none;
+      }
+
+      .cc-title {}
+
+      .testimonials__body {
+         margin: 0 -10px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+
+      .testimonials__item {
+         color: var(--mycolor1);
+         background-color: var(--mycolor2);
+         margin: 10px;
+         flex: 1 1 40%;
+         padding: 20px;
+      }
+
+      .testimonials__item p {
+         color: var(--mycolor1);
+      }
+
+      .testimonials__mark {
+         color: #ffb70f;
+         margin-bottom: 20px;
+         font-size: 18px;
+      }
+
+      .testimonials__info {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .testimonials__name {
+         margin: 10px;
+      }
+
+      .testimonials__name span {
+         font-size: 18px;
+      }
+
+      .testimonials__name p {
+         font-size: 12px;
+      }
+
+      .testimonials__icon {}
+
+      .testimonials__icon img {
+         width: 44px;
+         height: 44px;
+      }
+
+      /*---------blog---------*/
+
+      .blog {
+         padding: 30px;
+         background-color: var(--mycolor1);
+         text-align: center;
+      }
+
+      .blog__container {}
+
+      ._container {}
+
+      .blog__title {
+         margin-bottom: 15px;
+      }
+
+      .blog__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+      }
+
+      .blog__item {
+         flex: 1 1 25%;
+         margin: 10px;
+         text-align: left;
+         background-color: #fff;
+         box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+         transition: .3s;
+      }
+
+      .blog__item:hover {
+         box-shadow: 0 0 30px 0 rgba(0, 0, 0, .15);
+         transition: .3s;
+      }
+
+      .blog__image {
+         position: relative;
+      }
+
+      .blog__image img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+      }
+
+      .blog__label {
+         position: absolute;
+         top: 5%;
+         right: 5%;
+         background-color: #fff;
+         color: var(--mycolor2);
+         font-size: 10px;
+         padding: 6px 12px;
+         border-radius: 20px;
+         text-transform: uppercase;
+         cursor: pointer;
+      }
+
+      .blog__text {
+         padding: 20px;
+      }
+
+      .blog__quation {
+         font-size: 18px !important;
+         line-height: 22px !important;
+         font-weight: 600 !important;
+         color: var(--mycolor3);
+         font-family: var(--myfont2);
+      }
+
+      .blog__link {
+         font-size: 12px;
+         color: var(--mycolor3);
+         text-transform: uppercase;
+         font-weight: 600 !important;
+      }
+
+      @media screen and (max-width: 500px) {
+         .blog__item {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*----------faq------------*/
+
+      .faq {
+         padding: 30px;
+         text-align: center;
+      }
+
+      .faq__title-body {
+         max-width: 60%;
+         margin: 0 auto;
+      }
+
+      .faq__title {
+         font-size: 28px !important;
+      }
+
+      .faq-body {
+         margin: 0 -10px;
+      }
+
+
+      .faq-body-content {
+         text-align: left;
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      summary::-webkit-details-marker {
+         display: none;
+      }
+
+      summary::-moz-list-bullet {
+         list-style-type: none;
+      }
+
+      summary::marker {
+         display: none;
+      }
+
+      summary {
+         padding: 10px 35px 10px 25px;
+         display: block;
+         font-size: 16px;
+         font-weight: 500;
+         cursor: pointer;
+         position: relative;
+         border: 2px solid #f3f3f3;
+         font-family: var(--myfont2);
+         border-radius: 30px;
+         transition: .3s;
+      }
+
+      summary:before {
+         top: calc(50% - 8px);
+         right: 15px;
+         color: transparent;
+         background: url(img-7/faq.png) no-repeat 50% 50% / 16px 16px;
+         width: 16px;
+         height: 16px;
+         content: "";
+         position: absolute;
+         transition: transform .5s;
+
+      }
+
+      details[open]>summary:before {
+         background: url(img-7/faq2.png) no-repeat 50% 50% / 16px 16px;
+         width: 16px;
+         height: 16px;
+      }
+
+      summary~* {
+         padding: 10px 20px 0;
+      }
+
+      details[open] summary~* {
+         animation: sweep .5s ease-in-out;
+
+      }
+
+      details[open] summary {
+         background-color: var(--mycolor5);
+         transition: .3s;
+      }
+
+      @keyframes sweep {
+         0% {
+            opacity: 0;
+         }
+
+         100% {
+            opacity: 1;
+         }
+      }
+
+      summary:focus {
+         outline: 0;
+
+      }
+
+      details {
+         display: flex;
+         flex: 1 1 40%;
+         margin: 10px;
+         color: var(--mycolor3);
+      }
+
+      @media screen and (max-width: 500px) {
+         details {
+            flex: 1 1 100%;
+         }
+      }
+   </style>
+   <div class="main">
+      <section class="introduction">
+         <div class="introduction__container _container">
+            <div class="introduction__body">
+               <div class="introduction__content">
+                  <p class="introduction__sub-title">
+                     For Author & Writter</p>
+                  <p class="introduction__title">Meet Your Next Favorite Book</p>
+                  <p class="introduction__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                     exercitation
+                     ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <a href="" class="introduction__button cc-button">Buy Now</a>
+               </div>
+               <div class="introduction__image"><img src="img-7/introduction.png" alt=""></div>
+            </div>
+         </div>
+      </section>
+      <section class="welcome">
+         <div class="welcome__container _container">
+            <div class="welcome__title">
+               <h2>Ласкаво просимо</h2>
+               <h3>Популярні категорії товарів в нашому магазині</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="welcome__body">
+               <div class="welcome__item item-welcome">
+                  <div class="item-welcome__icon"><img src="img-7/welcome1.png" alt=""></div>
+                  <h3>Book Reviews</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                     et dolore magna aliqua.</p>
+                  <a class="item-welcome-link" href="">Learn More</a>
+               </div>
+               <div class="welcome__item item-welcome">
+                  <div class="item-welcome__icon"><img src="img-7/welcome2.png" alt=""></div>
+                  <h3>Top Picks</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                     et dolore magna aliqua.</p>
+                  <a class="item-welcome-link" href="">Learn More</a>
+               </div>
+               <div class="welcome__item item-welcome">
+                  <div class="item-welcome__icon"><img src="img-7/welcome3.png" alt=""></div>
+                  <h3>Book of Month</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                     et dolore magna aliqua.</p>
+                  <a class="item-welcome-link" href="">Learn More</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="featured">
+         <div class="featured__container _contanier">
+            <div class="featured__body">
+               <div class="featured__content">
+                  <div class="featured__title cc-title">
+                     <h2>Про товар</h2>
+                     <p>Enemy "Jake Gyllenhall"</p>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+                  <p class="featured__cost">$15.00</p>
+                  <a class="featured__button cc-button" href="">Add To Cart</a>
+               </div>
+               <div class="featured__image">
+                  <img src="img-7/featured.jpg" alt="">
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="review">
+         <div class="review__container _container">
+            <div class="review__title-body">
+               <div class="review__title cc-title">
+                  <h2>Оцінка товару від клієнтів</h2>
+                  <p>Latest reviews</p>
+               </div>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                  mattis, pulvinar dapibus leo.</p>
+            </div>
+            <div class="review__body">
+               <div class="review__item">
+                  <div class="review__image"><img src="img-7/review-01.jpg" alt=""></div>
+                  <div class="review__mark">★★★★★</div>
+                  <a class="review__button cc-button" href="">Read Reviews</a>
+               </div>
+               <div class="review__item">
+                  <div class="review__image"><img src="img-7/review-02.jpg" alt=""></div>
+                  <div class="review__mark">★★★★★</div>
+                  <a class="review__button cc-button" href="">Read Reviews</a>
+               </div>
+               <div class="review__item">
+                  <div class="review__image"><img src="img-7/review-03.jpg" alt=""></div>
+                  <div class="review__mark">★★★★<span>★</span></div>
+                  <a class="review__button cc-button" href="">Read Reviews</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="fact">
+         <div class="fact__container _container">
+            <div class="fact__title cc-title">
+               <h2>Цікаві факти про нашу компанію</h2>
+            </div>
+            <div class="fact__body">
+               <div class="fact__item">
+                  <div class="fact__icon"><img src="img-7/fact1.png" alt=""></div>
+                  <div class="fact__content">
+                     <p class="fact__number">76
+                        +</p>
+                     <p>Books Published</p>
+                  </div>
+               </div>
+               <div class="fact__item">
+                  <div class="fact__icon"><img src="img-7/fact2.png" alt=""></div>
+                  <div class="fact__content">
+                     <p class="fact__number">47
+                        +</p>
+                     <p>Awards Recognitions</p>
+                  </div>
+               </div>
+               <div class="fact__item">
+                  <div class="fact__icon"><img src="img-7/fact3.png" alt=""></div>
+                  <div class="fact__content">
+                     <p class="fact__number">
+                        100
+                        +</p>
+                     <p>
+                        Happy Readers</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="advantages">
+         <div class="advantages__container _container">
+            <div class="advantages__body">
+               <div class="advantages__image"><img src="img-7/advantages.png" alt=""></div>
+               <div class="advantages__content">
+                  <div class="advantages__title cc-title">
+                     <h2>Переваги нашої компанії</h2>
+                     <p>Що відрізняє нас від інших</p>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
+                  <ul class="advantages__list">
+                     <li>Sed ut perspiciatis unde</li>
+                     <li>omnis iste natus error</li>
+                     <li>voluptatem accusantium</li>
+                     <li>Sed ut perspiciatis unde</li>
+                     <li>omnis iste natus error</li>
+                     <li>voluptatem accusantium</li>
+                  </ul>
+                  <h3>Наші досягнення</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                     mattis.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="indicators">
+         <div class="indicators__container _container">
+            <div class="indicators__body">
+               <div class="indicators__items">
+                  <div class="indicators__item indicators__item_1">
+                     <p>Best Selling</p>
+                  </div>
+                  <div class="indicators__item indicators__item_2">
+                     <p>Top Book Lists</p>
+                  </div>
+                  <div class="indicators__item indicators__item_3">
+                     <p>Happy Viewers</p>
+                  </div>
+               </div>
+               <div class="indicators__content">
+                  <h2 class="indicators__title">
+                     Статистичні дані зв'язані з нашою компанією
+                  </h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                     mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                     tellus, luctus nec ullamcorper
+                     mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                     tellus, luctus nec ullamcorper
+                     mattis, pulvinar dapibus leo.</p>
+               </div>
+            </div>
+
+         </div>
+      </section>
+      <section class="testimonials">
+         <div class="testimonials__container _container">
+            <div class="testimonials__title-body">
+               <div class="testimonials__title cc-title">
+                  <h2>Відгуки наших клієнтів</h2>
+                  <p>Latest reviews</p>
+               </div>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                  mattis, pulvinar dapibus leo.</p>
+            </div>
+            <div class="testimonials__body">
+               <div class="testimonials__item">
+                  <div class="testimonials__mark">
+                     ★★★★★
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae necessitatibus veniam laboriosam
+                     distinctio optio corrupti numquam asperiores nobis, soluta omnis quo totam, voluptates voluptas
+                     nostrum repellendus saepe praesentium ut odio?</p>
+                  <div class="testimonials__info">
+                     <div class="testimonials__name"><span>Emma Swan</span>
+                        <p>Readers</p>
+                     </div>
+                     <div class="testimonials__icon"><img src="img-7/testimonials.png" alt=""></div>
+                  </div>
+
+               </div>
+               <div class="testimonials__item">
+                  <div class="testimonials__mark">
+                     ★★★★★
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae necessitatibus veniam laboriosam
+                     distinctio optio corrupti numquam asperiores nobis, soluta omnis quo totam, voluptates voluptas
+                     nostrum repellendus saepe praesentium ut odio?</p>
+                  <div class="testimonials__info">
+                     <div class="testimonials__name"><span>Peter Parker</span>
+                        <p>Readers</p>
+                     </div>
+
+                     <div class="testimonials__icon"><img src="img-7/testimonials.png" alt=""></div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="blog">
+         <div class="blog__container _container">
+            <div class="blog__title cc-title">
+               <h2>Новини</h2>
+               <p>Останні оновлення нашого блогу</p>
+            </div>
+            <div class="blog__body">
+               <div class="blog__item">
+                  <div class="blog__image">
+                     <img src="img-7/blog1.jpg" alt="">
+                     <div class="blog__label">top books</div>
+                  </div>
+                  <div class="blog__text">
+                     <p class="blog__quation">Why choose Auteur? What do we have?</p>
+                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                     <a class="blog__link" href="">Read more <span>>></span></a>
+                  </div>
+               </div>
+               <div class="blog__item">
+                  <div class="blog__image">
+                     <img src="img-7/blog2.jpg" alt="">
+                     <div class="blog__label">top books</div>
+                  </div>
+                  <div class="blog__text">
+                     <p class="blog__quation">Why choose Auteur? What do we have?</p>
+                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                     <a class="blog__link" href="">Read more <span>>></span></a>
+                  </div>
+               </div>
+               <div class="blog__item">
+                  <div class="blog__image">
+                     <img src="img-7/blog3.jpg" alt="">
+                     <div class="blog__label">top books</div>
+                  </div>
+                  <div class="blog__text">
+                     <p class="blog__quation">Why choose Auteur? What do we have?</p>
+                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                     <a class="blog__link" href="">Read more <span>>></span></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="faq">
+         <div class="faq__container _container">
+            <div class="faq__title-body">
+               <h2 class="faq__title">
+                  Поширені питання
+               </h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                  mattis, pulvinar dapibus leo.</p>
+            </div>
+            <div class="faq-body">
+               <div itemscope itemtype="https://schema.org/FAQPage" class="faq-body-content">
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Non consectetur a erat nam at lectus urna duis?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Varius vel pharetra vel turpis nunc eget lorem dolor?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</body>
+
+</html>
